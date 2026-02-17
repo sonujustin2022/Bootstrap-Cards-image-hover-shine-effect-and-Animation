@@ -1,0 +1,127 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+#nav-para{
+    display: inline;
+    background-color: rgb(250, 255, 255);
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(204, 11, 178);
+}
+
+#nav-heading{
+    font-weight: 700;
+}
+
+.navbar-nav a{
+    font-weight: 600;
+}
+
+.navbar-nav a:hover{
+    color: rgb(204, 11, 178);
+}
+
+
+/*  card section styling*/
+#card-section img{
+   height: 300px;
+    
+}
+
+#card-section h5{
+    padding-top: 20px;
+    font-size: 25px;
+     color: rgb(32, 33, 66);
+}
+
+#card-section .nav-para{
+    color: rgb(32, 33, 66);
+}
+
+#card-section a{
+    font-size: 20px;
+    text-decoration: none;
+    padding-left: 130px;
+   color: rgb(32, 33, 66);
+}
+
+.nav-badge{
+    position: relative;
+    bottom: 19px;
+    left: 65px;
+    background-color: #cc0bb2; ;
+    color: white
+}
+
+.img-badge-recom{
+  /* top-left, top-right, bottom-right, bottom-left */
+  border-radius: 0 15px  0 0; 
+    padding: 10px;
+    width: 150px;
+    font-size: 15px;
+    position: relative;
+    top: -35px;
+    background-color: rgb(204, 11, 178); ;
+    color: rgb(232, 248, 246);
+   
+}
+
+.img-badge-recom::before{
+    display: inline-block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -25%;
+  width: 15%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0.1) 0%,
+    rgba(255,255,255,0.6) 50%,
+    rgba(255,255,255,0.1) 100%
+  );
+  overflow: hidden;
+  transform: skewX(-25deg);
+  animation: shine 0.8s infinite;
+}
+
+@keyframes shine{
+  100%{
+    left: 75%;
+  }
+}
+
+
+.card::before{
+    display: inline-block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -55%;
+  width: 15%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0.1) 0%,
+    rgba(255,255,255,0.6) 50%,
+    rgba(255,255,255,0.1) 100%
+  );
+  overflow: hidden;
+  transform: skewX(-25deg);
+  
+}
+
+.card:hover::before{
+    animation: shine02 0.8s infinite;
+}
+
+
+
+@keyframes shine02{
+  100%{
+    left: 105%;
+  }
+}
