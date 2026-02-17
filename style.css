@@ -56,8 +56,11 @@
     color: white
 }
 
-.img-badge-recom{
-  /* top-left, top-right, bottom-right, bottom-left */
+
+
+
+/* .img-badge-recom{
+  top-left, top-right, bottom-right, bottom-left
   border-radius: 0 15px  0 0; 
     padding: 10px;
     width: 150px;
@@ -67,10 +70,54 @@
     background-color: rgb(204, 11, 178); ;
     color: rgb(232, 248, 246);
    
+} */
+
+
+.shine-box {
+  padding: 10px;
+  font-weight: 600;
+   border-radius: 0 15px  0 0; 
+  position: relative;
+  top: -40px;
+  width: 150px;
+  background-color: rgb(204, 11, 178); ;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  overflow: hidden; /* keeps shine inside */
 }
 
-.img-badge-recom::before{
-    display: inline-block;
+/* Shine layer */
+.shine-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.7),
+    transparent
+  );
+  transform: skewX(-25deg);
+  animation: shine 2s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+
+/* .img-badge-recom::before{
   content: "";
   position: absolute;
   top: 0;
@@ -83,7 +130,6 @@
     rgba(255,255,255,0.6) 50%,
     rgba(255,255,255,0.1) 100%
   );
-  overflow: hidden;
   transform: skewX(-25deg);
   animation: shine 0.8s infinite;
 }
@@ -93,7 +139,7 @@
     left: 75%;
   }
 }
-
+ */
 
 .image-container{
     position: relative;
