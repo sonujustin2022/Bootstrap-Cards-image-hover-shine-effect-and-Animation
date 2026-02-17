@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+}
+
+.card {
+  width: 320px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* IMAGE SECTION */
+.image-box {
+  position: relative;
+  overflow: hidden; /* Important */
+}
+
+.image-box img {
+  width: 100%;
+  display: block;
+}
+
+/* Shine Effect */
+.image-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.6),
+    transparent
+  );
+  transform: skewX(-25deg);
+}
+
+/* Hover triggers shine ONLY on image */
+.card:hover .image-box::before {
+  animation: shine 0.8s ease;
+}
+
+@keyframes shine {
+  100% {
+    left: 150%;
+  }
+}
+
+/* CONTENT */
+.content {
+  padding: 15px;
+}
+
+.content h3 {
+  margin-bottom: 8px;
+}
+
+.content p {
+  font-size: 14px;
+  color: #555;
+}

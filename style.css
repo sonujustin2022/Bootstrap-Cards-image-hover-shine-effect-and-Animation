@@ -95,33 +95,35 @@
 }
 
 
-.card::before{
-    display: inline-block;
+.image-container{
+    position: relative;
+  overflow: hidden; /* Important */
+}
+
+.image-container::before{
   content: "";
   position: absolute;
   top: 0;
-  left: -55%;
-  width: 15%;
+  left: -100%;
+  width: 50%;
   height: 100%;
   background: linear-gradient(
     120deg,
-    rgba(255,255,255,0.1) 0%,
-    rgba(255,255,255,0.6) 50%,
-    rgba(255,255,255,0.1) 100%
+    transparent,
+    rgba(255,255,255,0.6),
+    transparent
   );
-  overflow: hidden;
   transform: skewX(-25deg);
-  
+
 }
 
-.card:hover::before{
-    animation: shine02 0.8s infinite;
+.card:hover .image-container::before{
+   animation: shine02 0.8s ease;
+
 }
 
-
-
-@keyframes shine02{
-  100%{
-    left: 105%;
+@keyframes shine02 {
+  100% {
+    left: 150%;
   }
 }
